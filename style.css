@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ffb6c1, #ff1493);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+h1 {
+    color: white;
+    font-size: 3em;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #ff1493;
+}
+
+.balloons-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+}
+
+.balloon {
+    position: absolute;
+    width: 60px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.balloon::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100px;
+    background-color: #fff;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.balloon-pop {
+    transform: scale(0);
+}
+
+.message {
+    font-size: 1.5em;
+    color: #fff;
+    margin-top: 20px;
+}
